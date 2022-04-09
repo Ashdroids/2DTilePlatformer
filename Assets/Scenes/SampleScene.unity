@@ -8953,7 +8953,7 @@ GameObject:
   - component: {fileID: 1379792736}
   - component: {fileID: 1379792735}
   - component: {fileID: 1379792734}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platforms Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10449,9 +10449,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4462033049992303316, guid: f4ec724af1dc2944e99e7d473a78eb11, type: 3}
+      propertyPath: jumpSpeed
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6579939121768906784, guid: f4ec724af1dc2944e99e7d473a78eb11, type: 3}
       propertyPath: m_Name
       value: Gary (Player)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6579939121768906812, guid: f4ec724af1dc2944e99e7d473a78eb11, type: 3}
+      propertyPath: m_GravityScale
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6579939121768906813, guid: f4ec724af1dc2944e99e7d473a78eb11, type: 3}
       propertyPath: m_RootOrder
@@ -10459,7 +10467,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6579939121768906813, guid: f4ec724af1dc2944e99e7d473a78eb11, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.39
+      value: -8.42
       objectReference: {fileID: 0}
     - target: {fileID: 6579939121768906813, guid: f4ec724af1dc2944e99e7d473a78eb11, type: 3}
       propertyPath: m_LocalPosition.y

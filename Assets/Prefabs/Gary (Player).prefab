@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6325217468176470587}
   - component: {fileID: 3411587497001507518}
   - component: {fileID: 4462033049992303316}
+  - component: {fileID: 3507852335236036994}
   m_Layer: 0
   m_Name: Gary (Player)
   m_TagString: Untagged
@@ -96,7 +97,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 33250361
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 2142590090, guid: 5d2f42eb61b665a4ba0d7a1035eff573, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -124,7 +125,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 3
+  m_GravityScale: 6
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -143,8 +144,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.03999999, y: -0.066414356}
-  m_Size: {x: 0.48528862, y: 0.8893094}
+  m_Offset: {x: -0.045310974, y: -0.038089752}
+  m_Size: {x: 0.5525589, y: 0.8326602}
   m_Direction: 0
 --- !u!114 &3411587497001507518
 MonoBehaviour:
@@ -188,5 +189,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 291e98b04fbb7404c8da8ce53873a034, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeed: 5
-  jumpSpeed: 15
+  runSpeed: 7
+  jumpSpeed: 20
+  climbSpeed: 5
+--- !u!61 &3507852335236036994
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6579939121768906784}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.03186512, y: -0.46027482}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.44766998, y: 0.07945037}
+  m_EdgeRadius: 0

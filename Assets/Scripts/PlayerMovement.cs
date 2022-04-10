@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float jumpSpeed = 5f;
     [SerializeField] float climbSpeed = 5f;
     [SerializeField] Vector2 deathKick = new Vector2 (10f,10f);
+    [SerializeField] GameObject bulletPrefab;
+    [SerializeField] Transform gun;
     Animator animator;
     Vector2 moveInput;
     Rigidbody2D rb;
@@ -51,6 +53,24 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity += new Vector2(0f, jumpSpeed);
         }
+    }
+
+    void OnFire(InputValue value)
+    {
+        if(!isAlive){return;}
+        
+        if(value.isPressed)
+        {
+            Instantiate(bulletPrefab, gun.position, Quaternion.Euler(0,0,-90));
+            animator.SetBool("isFiring", true);
+            Invoke("StopFiring", 1f);
+        }
+       
+    }
+
+    void StopFiring()
+    {
+        animator.SetBool("isFiring", false);
     }
 
     void Run()

@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1393430680}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.227, y: -0.125, z: 0}
+  m_LocalPosition: {x: 0.66, y: -0.09, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -129,7 +129,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 33250361
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 2142590090, guid: 5d2f42eb61b665a4ba0d7a1035eff573, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -224,7 +224,9 @@ MonoBehaviour:
   runSpeed: 7
   jumpSpeed: 20
   climbSpeed: 5
-  deathKick: {x: 10, y: 10}
+  deathKick: {x: 20, y: 20}
+  bulletPrefab: {fileID: 5030976644909189758, guid: ad8644150caadde4cae9a2182998fb56, type: 3}
+  gun: {fileID: 1393430681}
 --- !u!61 &3507852335236036994
 BoxCollider2D:
   m_ObjectHideFlags: 0

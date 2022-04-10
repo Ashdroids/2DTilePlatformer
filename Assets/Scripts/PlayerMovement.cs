@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float runSpeed = 1f;
     [SerializeField] float jumpSpeed = 5f;
     [SerializeField] float climbSpeed = 5f;
+    [SerializeField] Vector2 deathKick = new Vector2 (10f,10f);
     Animator animator;
     Vector2 moveInput;
     Rigidbody2D rb;
@@ -74,30 +75,30 @@ public class PlayerMovement : MonoBehaviour
 
     void ClimbLadder()
     {
-       
+        if(!bodyCollider.IsTouchingLayers(LayerMask.GetMask("Climbing")))
+        {
+            rb.gravityScale = startGravity;
+            animator.SetBool("isClimbing", false);
+            return;
+        }
+
+        Vector2 climbVelocity = new Vector2 (rb.velocity.x, moveInput.y*climbSpeed);
+        rb.velocity = climbVelocity;
+        rb.gravityScale = 0f;
+
         bool playerHasVerticalMovement = Mathf.Abs(rb.velocity.y) > Mathf.Epsilon;
         animator.SetBool("isClimbing", playerHasVerticalMovement);
 
-        if(bodyCollider.IsTouchingLayers(LayerMask.GetMask("Climbing")))
-        {
-            Vector2 climbVelocity = new Vector2 (rb.velocity.x, moveInput.y*climbSpeed);
-            rb.velocity = climbVelocity;
-            rb.gravityScale = 0f;
-        } 
-        else
-        {
-            rb.gravityScale = startGravity;
-        }
     }
 
     void Die()
     {
-        if(rb.IsTouchingLayers(LayerMask.GetMask("Enemies")))
+        if(rb.IsTouchingLayers(LayerMask.GetMask("Enemies","Hazards")))
         {
             isAlive = false;
+            animator.SetTrigger("Dying");
+            rb.velocity = deathKick;
         }
     }
-
-
 
 }

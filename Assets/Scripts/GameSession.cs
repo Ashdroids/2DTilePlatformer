@@ -7,10 +7,13 @@ using TMPro;
 public class GameSession : MonoBehaviour
 {
     [SerializeField] int playerLives = 3;
-    [SerializeField] float reloadLevelDelay = 2f;
+    [SerializeField] float reloadDelay = 2f;
+    [SerializeField] float gameOverDelay = 4f;
     [SerializeField] TextMeshProUGUI livesText;
     [SerializeField] TextMeshProUGUI scoreText;
     [SerializeField] int score;
+    [SerializeField] AudioClip deathSFX;
+    [SerializeField] AudioClip gameOverSFX;
     
     void Awake() 
     {
@@ -43,17 +46,18 @@ public class GameSession : MonoBehaviour
         if(playerLives > 1)
         {
             TakeLife();
-            StartCoroutine(ReloadScene());
+            GetComponent<AudioSource>().PlayOneShot(deathSFX);
+            Invoke("ReloadScene", reloadDelay);
         }
         else
         {
-            ResetGameSession();
+            GetComponent<AudioSource>().PlayOneShot(gameOverSFX);
+            Invoke("ResetGameSession", gameOverDelay);
         }
     }
 
-    IEnumerator ReloadScene()
+    void ReloadScene()
     {
-        yield return new WaitForSecondsRealtime(reloadLevelDelay);
         int currentSceneindex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene (currentSceneindex);
     }

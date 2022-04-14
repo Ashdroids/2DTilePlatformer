@@ -999,6 +999,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2582597821494264306, guid: 78e4a5ec95f67124ab32e3541fe5f029, type: 3}
+      propertyPath: deathSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: b7d711fb9a2d90e4097766798ea706c5, type: 3}
+    - target: {fileID: 2582597821494264306, guid: 78e4a5ec95f67124ab32e3541fe5f029, type: 3}
+      propertyPath: gameOverSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: a362cde87f9a5ae4d941106214121a87, type: 3}
     - target: {fileID: 3984009528120061061, guid: 78e4a5ec95f67124ab32e3541fe5f029, type: 3}
       propertyPath: m_Name
       value: Game Session
@@ -22106,11 +22114,11 @@ PrefabInstance:
       objectReference: {fileID: 1858239425}
     - target: {fileID: 2249991459184282238, guid: 0f7b0fd63a910194093866b29cfcba8a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.510197
+      value: -14.513811
       objectReference: {fileID: 0}
     - target: {fileID: 2249991459184282238, guid: 0f7b0fd63a910194093866b29cfcba8a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.471755
+      value: 7.4717317
       objectReference: {fileID: 0}
     - target: {fileID: 2249991459302527720, guid: 0f7b0fd63a910194093866b29cfcba8a, type: 3}
       propertyPath: m_Follow

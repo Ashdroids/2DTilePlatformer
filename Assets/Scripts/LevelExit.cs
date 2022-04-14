@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class LevelExit : MonoBehaviour
 {
 
-    [SerializeField] float loadNextLevelDelay = 1f;
+    [SerializeField] float loadNextLevelDelay = 2f;
     [SerializeField] int levelCompletePoints = 100;
     public bool exitPortalActive = true;
 
@@ -16,6 +16,7 @@ public class LevelExit : MonoBehaviour
         if(other.tag == "Player" && exitPortalActive)
         {
             exitPortalActive = false;
+            GetComponent<AudioSource>().Play();
             StartCoroutine(LoadNextLevel());
         }
     }

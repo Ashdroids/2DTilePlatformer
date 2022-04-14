@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Vector2 deathKick = new Vector2 (10f,10f);
     [SerializeField] GameObject bulletPrefab;
     [SerializeField] Transform gun;
+    [SerializeField] AudioClip bounceSFX;
     Animator animator;
     Vector2 moveInput;
     Rigidbody2D rb;
@@ -118,6 +119,7 @@ public class PlayerMovement : MonoBehaviour
             isAlive = false;
             animator.SetTrigger("Dying");
             rb.velocity = deathKick;
+            FindObjectOfType<LevelExit>().exitPortalActive = false;
             FindObjectOfType<GameSession>().ProcessPlayerDeath();
         }
     }

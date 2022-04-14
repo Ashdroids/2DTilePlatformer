@@ -8,14 +8,14 @@ public class LevelExit : MonoBehaviour
 
     [SerializeField] float loadNextLevelDelay = 1f;
     [SerializeField] int levelCompletePoints = 100;
-    bool levelIsComplete;
+    public bool exitPortalActive = true;
 
 
     void OnTriggerEnter2D(Collider2D other) 
     {
-        if(other.tag == "Player" && !levelIsComplete)
+        if(other.tag == "Player" && exitPortalActive)
         {
-            levelIsComplete = true;
+            exitPortalActive = false;
             StartCoroutine(LoadNextLevel());
         }
     }
@@ -33,6 +33,7 @@ public class LevelExit : MonoBehaviour
             nextSceneIndex = 0;
         }
 
+        FindObjectOfType<ScenePersist>().ResetScenePersist();
         SceneManager.LoadScene (nextSceneIndex);
     }
     

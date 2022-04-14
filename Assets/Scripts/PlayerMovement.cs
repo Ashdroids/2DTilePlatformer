@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] GameObject bulletPrefab;
     [SerializeField] Transform gun;
     [SerializeField] AudioClip bounceSFX;
+    [SerializeField] AudioClip fireSFX;
     Animator animator;
     Vector2 moveInput;
     Rigidbody2D rb;
@@ -63,6 +64,7 @@ public class PlayerMovement : MonoBehaviour
         if(value.isPressed)
         {
             Instantiate(bulletPrefab, gun.position, Quaternion.Euler(0,0,-90));
+            GetComponent<AudioSource>().PlayOneShot(fireSFX);
             animator.SetBool("isFiring", true);
             Invoke("StopFiring", 0.3f);
         }

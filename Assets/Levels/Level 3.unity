@@ -24499,11 +24499,11 @@ PrefabInstance:
       objectReference: {fileID: 1858239425}
     - target: {fileID: 2249991459184282238, guid: 0f7b0fd63a910194093866b29cfcba8a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.470095
+      value: -14.46862
       objectReference: {fileID: 0}
     - target: {fileID: 2249991459184282238, guid: 0f7b0fd63a910194093866b29cfcba8a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.3232317
+      value: 1.3232551
       objectReference: {fileID: 0}
     - target: {fileID: 2249991459184282241, guid: 0f7b0fd63a910194093866b29cfcba8a, type: 3}
       propertyPath: orthographic size
@@ -24606,6 +24606,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4462033049992303316, guid: f4ec724af1dc2944e99e7d473a78eb11, type: 3}
+      propertyPath: fireSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: cf5d46fb536b13941a7b3b1a77ecbe4e, type: 3}
+    - target: {fileID: 4462033049992303316, guid: f4ec724af1dc2944e99e7d473a78eb11, type: 3}
+      propertyPath: bounceSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: dee94792eafd749449103a064c65a9bc, type: 3}
     - target: {fileID: 6579939121768906784, guid: f4ec724af1dc2944e99e7d473a78eb11, type: 3}
       propertyPath: m_Name
       value: Gary (Player)

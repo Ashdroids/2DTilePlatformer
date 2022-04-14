@@ -2,11 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameSession : MonoBehaviour
 {
     [SerializeField] int playerLives = 3;
     [SerializeField] float reloadLevelDelay = 2f;
+    [SerializeField] TextMeshProUGUI livesText;
+    [SerializeField] TextMeshProUGUI scoreText;
+    [SerializeField] int score;
+    
     void Awake() 
     {
         int numGameSessions = FindObjectsOfType<GameSession>().Length;
@@ -18,6 +23,22 @@ public class GameSession : MonoBehaviour
         {
             DontDestroyOnLoad(gameObject);
         }
+    }
+
+    void Start() 
+    {
+        livesText.text = playerLives.ToString();
+        
+    }
+
+    void Update() 
+    {
+        scoreText.text = score.ToString();
+    }
+
+    public void AddToScore(int pointsToAdd)
+    {
+        score += pointsToAdd;
     }
 
     public void ProcessPlayerDeath()
@@ -43,6 +64,7 @@ public class GameSession : MonoBehaviour
     void TakeLife()
     {
         playerLives --;
+        livesText.text = playerLives.ToString();
     }
 
     void ResetGameSession()

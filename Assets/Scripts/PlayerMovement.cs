@@ -64,7 +64,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Instantiate(bulletPrefab, gun.position, Quaternion.Euler(0,0,-90));
             animator.SetBool("isFiring", true);
-            Invoke("StopFiring", 1f);
+            Invoke("StopFiring", 0.3f);
         }
        
     }

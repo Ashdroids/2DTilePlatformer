@@ -137,6 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinSFX: {fileID: 8300000, guid: fbfef2549c139274293b6405e7722571, type: 3}
+  pointsForCoin: 20
 --- !u!82 &112534479
 AudioSource:
   m_ObjectHideFlags: 0

@@ -25,15 +25,12 @@ public class GameSession : MonoBehaviour
         }
     }
 
-    void Start() 
-    {
-        livesText.text = playerLives.ToString();
-        
-    }
+
 
     void Update() 
     {
-        scoreText.text = score.ToString();
+        scoreText.text = "Score: " + score.ToString();
+        livesText.text = "Lives: " + playerLives.ToString();
     }
 
     public void AddToScore(int pointsToAdd)

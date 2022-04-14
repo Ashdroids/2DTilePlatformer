@@ -101,7 +101,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadNextLevelDelay: 1
   levelCompletePoints: 100
-  levelCompleteParticles: {fileID: 0}
   exitPortalActive: 1
 --- !u!61 &9160890568778222030
 BoxCollider2D:
@@ -141,7 +140,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: db06006ec77303140adf9bbe6fb30a13, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0

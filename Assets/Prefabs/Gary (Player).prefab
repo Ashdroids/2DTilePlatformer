@@ -229,7 +229,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 5030976644909189758, guid: ad8644150caadde4cae9a2182998fb56, type: 3}
   gun: {fileID: 1393430681}
   bounceSFX: {fileID: 0}
-  fireSFX: {fileID: 0}
+  fireSFX: {fileID: 8300000, guid: cf5d46fb536b13941a7b3b1a77ecbe4e, type: 3}
   isAlive: 1
 --- !u!61 &3507852335236036994
 BoxCollider2D:

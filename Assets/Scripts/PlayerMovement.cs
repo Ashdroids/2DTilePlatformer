@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     CapsuleCollider2D bodyCollider;
     BoxCollider2D feetCollider;
     float startGravity;
-    bool isAlive = true;
+    public bool isAlive = true;
     
     void Start()
     {

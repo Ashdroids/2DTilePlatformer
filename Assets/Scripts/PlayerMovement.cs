@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float runSpeed = 1f;
@@ -41,7 +42,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if(!isAlive){return;}
         moveInput = value.Get<Vector2>();
-        Debug.Log(moveInput);
     }
 
     void OnJump(InputValue value)
@@ -118,6 +118,7 @@ public class PlayerMovement : MonoBehaviour
             isAlive = false;
             animator.SetTrigger("Dying");
             rb.velocity = deathKick;
+            FindObjectOfType<GameSession>().ProcessPlayerDeath();
         }
     }
 

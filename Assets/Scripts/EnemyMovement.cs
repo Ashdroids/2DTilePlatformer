@@ -26,4 +26,6 @@ public class EnemyMovement : MonoBehaviour
     {
         transform.localScale = new Vector2 (-(Mathf.Sign(rb.velocity.x)) , 1f);
     }
+
+    //Add in Enemy Health and move anything eenemy death related from Bullet.cs 
 }

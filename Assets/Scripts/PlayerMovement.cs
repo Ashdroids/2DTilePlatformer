@@ -5,13 +5,13 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 {
+    [Header ("Player Tuning")]
     [SerializeField] float runSpeed = 1f;
     [SerializeField] float jumpSpeed = 5f;
     [SerializeField] float climbSpeed = 5f;
     [SerializeField] Vector2 deathKick = new Vector2 (10f,10f);
     [SerializeField] GameObject bulletPrefab;
     [SerializeField] Transform gun;
-    [SerializeField] AudioClip bounceSFX;
     [SerializeField] AudioClip fireSFX;
     Animator animator;
     Vector2 moveInput;

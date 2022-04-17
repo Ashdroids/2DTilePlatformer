@@ -418,7 +418,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerLives: 3
-  reloadLevelDelay: 2
+  reloadDelay: 2
+  gameOverDelay: 4
   livesText: {fileID: 849373376}
   scoreText: {fileID: 1538729716}
   score: 0
+  deathSFX: {fileID: 8300000, guid: b7d711fb9a2d90e4097766798ea706c5, type: 3}
+  gameOverSFX: {fileID: 8300000, guid: a362cde87f9a5ae4d941106214121a87, type: 3}
